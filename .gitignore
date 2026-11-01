@@ -1,0 +1,124 @@
+# Build artifacts
+/bin/
+/dist/
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+
+# Go
+/vendor/
+go.sum.bak
+coverage.out
+coverage.html
+*.test
+*.out
+
+# Rust
+rust/target/
+rust/Cargo.lock.bak
+
+# Python (anno2ppt 子进程)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local config / secrets
+.env
+.env.local
+*.local.yaml
+config.local.yaml
+
+# Runtime data (user-specific)
+medit-data/
+~/.medit/
+.via54schola/
+
+# Logs
+*.log
+logs/
+
+# Audit
+audit/
+
+# OS
+$RECYCLE.BIN/
+System Volume Information/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.bak
+
+# OneDrive sync artifacts (防误同步)
+*.lnk
+desktop.ini
+
+# Test artifacts
+tests/e2e/screenshots/
+tests/e2e/output/
+tests/stress/logs/
+
+# test-data PDFs - too large for git, check Desktop/test/
+references/test-data/pdfs/
+references/test-data/embedded/
+/medit
+/medit-mcp
+cmd/medit/medit
+*.exe
+list_citations_v2
+
+# User-specific paths (NEVER commit; protect private project data + tokens)
+# 雷管方案 (临床文献整理项目, 私有, 商业机密)
+雷管方案_文献整理/
+**/雷管方案_文献整理/
+
+# User credentials / tokens (NEVER commit; protect secrets)
+feishu_credentials.json
+**/feishu_credentials.json
+.env
+.env.local
+*.local.yaml
+config.local.yaml
+
+# via54Medit legacy ecosystem (local-only; NOT for public repo)
+AGENTS.md
+CHANGELOG.md
+REFERENCES.md
+requirements.txt
+Makefile
+.goreleaser.yaml
+CITATION.cff
+CODE_OF_CONDUCT.md
+SECURITY.md
+PULL_REQUEST_TEMPLATE.md
+FUNDING.yml
+.cursorrules
+.trae/
+.openclaw/
+.agents/
+api/
+configs/
+docs/
+integrations/
+market-reports/
+references/
+rust/
+scripts/
+skills/
+templates/
+tests/
+pkg/
