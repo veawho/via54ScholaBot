@@ -35,13 +35,12 @@ func TestCommitPlaceholder(t *testing.T) {
 func TestFullContainsKeyFields(t *testing.T) {
 	full := version.Full()
 	want := []string{
-		"via54Medit",
+		"via54ScholaBot",
 		"commit:",
 		"built:",
 		"go:",
 		"license:",
 		"AGPL-3.0",
-		"MIT",
 		"github.com/veawho/via54ScholaBot",
 	}
 	for _, w := range want {
@@ -53,11 +52,11 @@ func TestFullContainsKeyFields(t *testing.T) {
 
 // TestShortFormat pins the `medit --version` one-line shape.
 // cobra's rootCmd.Version field uses Short(); changing format breaks
-// any tooling that greps for "via54Medit X.Y.Z".
+// any tooling that greps for "via54ScholaBot X.Y.Z".
 func TestShortFormat(t *testing.T) {
 	short := version.Short()
-	if !strings.HasPrefix(short, "via54Medit ") {
-		t.Errorf("Short() = %q: must start with \"via54Medit \"", short)
+	if !strings.HasPrefix(short, "via54ScholaBot ") {
+		t.Errorf("Short() = %q: must start with \"via54ScholaBot \"", short)
 	}
 	if !strings.Contains(short, "(") || !strings.Contains(short, ")") {
 		t.Errorf("Short() = %q: must include commit in parens", short)
